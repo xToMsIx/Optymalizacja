@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walidacja Formularza</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jQuery/jquery-ui.css">
+    <script src="jQuery/external/jquery/jquery.js"></script>   
+    <script src="jQuery/jquery-ui.js"></script>  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="script.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="drag-buttons" style="position: fixed; top: 10px; right: 10px; z-index: 1000; display: flex; gap: 10px;">
+        <button id="toggle-drag-mode" style="padding: 5px 10px; font-size: 14px; border-radius: 5px; background-color: #0c6eee; color: white; border: none; cursor: pointer;">
+            🔄 Włącz przesuwanie paneli
+        </button>
+        <button id="toggle-content-drag" style="padding: 5px 10px; font-size: 14px; border-radius: 5px; background-color: #0c6eee; color: white; border: none; cursor: pointer;">
+            🔄 Włącz przesuwanie modułów
+        </button>
+    </div>
+    <div class="container">
+        <div class="header"><h2>STRONA GŁÓWNA</h2></div>
+
+        <nav class="menu">
+            <ul>
+                <li>O nas</li>
+                <li>Kontakt</li>
+                <li>Lokalizacja</li>
+                <li>Social Media</li>
+                <li>Inne</li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="content-module">
+                <div id="accordion">
+                    <h3>Zakładka nr.1</h3>
+                    <div>
+                        <div id="tabs">
+                            <ul>
+                                <li><a href="#tabs-1">Tabela</a></li>
+                                <li><a href="#tabs-2">Sterowanie</a></li>
+                            </ul>
+                            <div id="tabs-1">
+                                <label>
+                                    <input type="checkbox" id="toggleRowColor"> Włącz zabarwienie wierszy parzystych
+                                </label>
+                                <table id="data-table" style="width:100%; margin-left: 10px;">
+                                    <tr>
+                                        <th>Imię i Nazwisko</th>
+                                        <th>Wiek</th>
+                                        <th>Zawód</th>
+                                        <th>Akcja</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Jan Kowalski</td>
+                                        <td>30</td>
+                                        <td>Programista</td>
+                                        <td>
+                                            <button class="deletePersonBtn">Usuń osobę</button>
+                                            <button class="hideRowBtn">Ukryj</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anna Nowak</td>
+                                        <td>25</td>
+                                        <td>Grafik</td>
+                                        <td>
+                                            <button class="deletePersonBtn">Usuń osobę</button>
+                                            <button class="hideRowBtn">Ukryj</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Krzysztof Zieliński</td>
+                                        <td>35</td>
+                                        <td>Marketingowiec</td>
+                                        <td>
+                                            <button class="deletePersonBtn">Usuń osobę</button>
+                                            <button class="hideRowBtn">Ukryj</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <button id="addNewBtn">Dodaj nową osobę</button>
+                            </div>
+                            <div id="tabs-2">
+                                <div class="slider-container">
+                                    <label class="slider-label">Temperatura: <span id="temperature-value">20</span>°C</label>
+                                    <div id="temperature-slider"></div>
+                                </div>
+                                <div class="slider-container">
+                                    <label class="slider-label">Wilgotność: <span id="humidity-value">50</span>%</label>
+                                    <div id="humidity-slider"></div>
+                                </div>
+                                <div class="slider-container">
+                                    <label class="slider-label">Jakość powietrza: <span id="air-quality-value">100</span></label>
+                                    <div id="air-quality-slider"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="addTabBtn">Dodaj nową zakładkę</button>
+                    </div>
+                    <h3>Zakładka nr.2</h3>
+                    <div class="content-module">
+                        <p>Treść sekcji 2.</p>
+                    </div>
+                    <h3>Zakładka nr.3</h3>
+                    <div class="content-module">
+                        <p>Treść sekcji 3.</p>
+                    </div>
+                    <h3>Zakładka nr.4</h3>
+                    <div class="content-module">
+                        <p>Treść sekcji 4.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="content-module">
+                <h3>Moduł Informacyjny</h3>
+                <p>To jest przykładowy moduł, który można przeciągać w obszarze centralnym.</p>
+            </div>
+        
+            <div class="content-module">
+                <h3>Statystyki</h3>
+                <div class="charts-container">
+                    <div class="chart-wrapper">
+                        <canvas id="tempChart"></canvas>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="humidityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-module" id="removable-items">
+                <h3>Usuwalne elementy</h3>
+                <div class="item-container">
+                    <div class="removable-item">
+                        <img src="https://picsum.photos/150/150" alt="Random image">
+                        <h4>Element 1</h4>
+                        <button class="remove-item">Usuń element</button>
+                    </div>
+                    <div class="removable-item">
+                        <img src="https://picsum.photos/151/150" alt="Random image">
+                        <h4>Element 2</h4>
+                        <button class="remove-item">Usuń element</button>
+                    </div>
+                    <div class="removable-item">
+                        <img src="https://picsum.photos/152/150" alt="Random image">
+                        <h4>Element 3</h4>
+                        <button class="remove-item">Usuń element</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="left-sidebar">
+            <div class="module">
+                <h4>Kalendarz</h4>
+                <div id="calendar"></div>
+            </div>
+            <div class="module">
+                <h4>Interesujące odsyłacze</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <i class="fab fa-facebook" style="margin-right: 10px;"></i>
+                            Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <i class="fab fa-youtube" style="margin-right: 10px;"></i>
+                            YouTube
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com" target="_blank">
+                            <i class="fab fa-github" style="margin-right: 10px;"></i>
+                            GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="module">
+                <h4>Ostatnie wydarzenia</h4>
+                <ul>
+                    <li>Wydarzenie 1</li>
+                    <li>Wydarzenie 2</li>
+                    <li>Wydarzenie 3</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-sidebar">
+            <div class="module">
+                <h4>Aktualności</h4>
+                <p>Najświeższe informacje z naszej strony.</p>
+            </div>
+            <div class="module">
+                <h4>Najlepiej oceniono</h4>
+                <ul>
+                    <li>Artykuł 1</li>
+                    <li>Artykuł 2</li>
+                    <li>Artykuł 3</li>
+                </ul>
+            </div>
+            <div class="module">
+                <h4>Galeria zdjęć</h4>
+                <div id="random-image-container">
+                    <img id="random-image" src="https://picsum.photos/300/200" alt="Losowe zdjęcie" style="width: 100%; border-radius: 8px;">
+            </div>
+        </div>
+
+
+    </div>
+    <div class="footer"><h4>STOPKA</h4></div>
+
+    <div id="addTabModal" title="Dodaj nową zakładkę">
+        <form id="addTabForm">
+            <label for="tab-title">Tytuł zakładki:</label>
+            <input type="text" id="tab-title" name="tab-title"><br><br>
+            <label for="tab-content">Treść zakładki:</label>
+            <textarea id="tab-content" name="tab-content" rows="4" cols="30"></textarea>
+        </form>
+    </div>
+
+    <div id="addModal" title="Dodaj nowy wiersz">
+        <form id="addForm">
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="age">Wiek:</label>
+            <input type="number" id="age" name="age"><br><br>
+
+            <div id="job-selection">
+                <label for="job">Wybierz zawód:</label><br>
+                <div class="job-option" data-job="Programista">Programista</div>
+                <div class="job-option" data-job="Grafik">Grafik</div>
+                <div class="job-option" data-job="Marketingowiec">Marketingowiec</div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
