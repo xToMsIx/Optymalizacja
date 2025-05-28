@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal gamingowy Warszawa – recenzje gier, newsy, forum | GameVerse</title>
+    <meta name="description" content="GameVerse – nowoczesny portal gamingowy z Warszawy. Najnowsze recenzje gier, newsy, rankingi i forum graczy. Dołącz do graczy z Mazowsza!">
+    <meta name="keywords" content="gry Warszawa, portal gamingowyy, recenzje gier, newsy o grach, forum graczy, społeczność graczy Warszawa, rankingi gier, gry komputerowe, e-sport Warszawa">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.gameverse.pl/">
+    <link rel="stylesheet" href="styles.css">
+    <meta property="og:title" content="Portal gamingowy Warszawa – recenzje gier, newsy, forum | GameVerse">
+    <meta property="og:description" content="GameVerse – nowoczesny portal gamingowy z Warszawy. Najnowsze recenzje gier, newsy, rankingi i forum graczy. Dołącz do graczy z Mazowsza!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gameverse.pl/">
+    <meta property="og:site_name" content="GameVerse">
+    <meta property="og:locale" content="pl_PL">
+    <meta name="theme-color" content="#3816a6">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/controller.png" alt="GameVerse Logo">
+            <h1>GameVerse</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link active">Strona Główna</a></li>
+                <li><a href="news.html" class="nav-link">Aktualności</a></li>
+                <li><a href="reviews.html" class="nav-link">Recenzje</a></li>
+                <li><a href="rankings.html" class="nav-link">Rankingi</a></li>
+                <li><a href="community.html" class="nav-link">Społeczność</a></li>
+                <li><a href="multimedia.html" class="nav-link">Multimedia</a></li>
+                <li><a href="widgets.html" class="nav-link">Widgety</a></li>
+                <li><a href="about.html" class="nav-link">O Nas</a></li>
+                <li><a href="contact.html" class="nav-link">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="theme-switcher">
+            <button id="theme-toggle">🌙</button>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="section active">
+            <div class="hero">
+                <h2>GameVerse – portal gamingowy z Warszawy</h2>
+                <p>Najlepsze recenzje gier, newsy, rankingi, forum oraz społeczność graczy z Mazowsza i Warszawy. Dołącz do lokalnych pasjonatów gamingu!</p>
+                <a href="news.html" class="cta">Zobacz najnowsze aktualności</a>
+            </div>
+            <div class="quick-widgets">
+                <div class="mini-widget" id="clock-widget">
+                    <h4>Aktualny czas</h4>
+                    <div id="clock"></div>
+                </div>
+                <div class="mini-widget" id="daily-quote-widget">
+                    <h4>Cytat dnia</h4>
+                    <blockquote id="daily-quote"></blockquote>
+                </div>
+                <div class="mini-widget" id="random-game-widget">
+                    <h4>Losowa gra</h4>
+                    <div id="random-game"></div>
+                </div>
+                <div class="mini-widget" id="weather-widget">
+                    <h4>Pogoda</h4>
+                    <div id="weather"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>© 2025 GameVerse. Wszelkie prawa zastrzeżone.</div>
+        <div>
+            <a href="privacy.html">Polityka prywatności</a> | 
+            <a href="rules.html">Regulamin</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

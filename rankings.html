@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rankingi - GameVerse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/controller.png" alt="GameVerse Logo">
+            <h1>GameVerse</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Strona Główna</a></li>
+                <li><a href="news.html" class="nav-link">Aktualności</a></li>
+                <li><a href="reviews.html" class="nav-link">Recenzje</a></li>
+                <li><a href="rankings.html" class="nav-link active">Rankingi</a></li>
+                <li><a href="community.html" class="nav-link">Społeczność</a></li>
+                <li><a href="multimedia.html" class="nav-link">Multimedia</a></li>
+                <li><a href="widgets.html" class="nav-link">Widgety</a></li>
+                <li><a href="about.html" class="nav-link">O Nas</a></li>
+                <li><a href="contact.html" class="nav-link">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="theme-switcher">
+            <button id="theme-toggle">🌙</button>
+        </div>
+    </header>
+    <main>
+        <section id="rankings" class="section active">
+            <h2>Rankingi</h2>
+            <div class="ranking-tabs">
+                <button class="ranking-tab active" data-ranking="top2025">Top 10 gier 2025</button>
+                <button class="ranking-tab" data-ranking="rpg">Najlepsze RPG</button>
+                <button class="ranking-tab" data-ranking="multiplayer">Multiplayer</button>
+            </div>
+            <div id="ranking-content">
+                <!-- Ranking -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>© 2025 GameVerse. Wszelkie prawa zastrzeżone.</div>
+        <div>
+            <a href="privacy.html">Polityka prywatności</a> | 
+            <a href="rules.html">Regulamin</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

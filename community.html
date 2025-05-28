@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Społeczność - GameVerse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/controller.png" alt="GameVerse Logo">
+            <h1>GameVerse</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Strona Główna</a></li>
+                <li><a href="news.html" class="nav-link">Aktualności</a></li>
+                <li><a href="reviews.html" class="nav-link">Recenzje</a></li>
+                <li><a href="rankings.html" class="nav-link">Rankingi</a></li>
+                <li><a href="community.html" class="nav-link active">Społeczność</a></li>
+                <li><a href="multimedia.html" class="nav-link">Multimedia</a></li>
+                <li><a href="widgets.html" class="nav-link">Widgety</a></li>
+                <li><a href="about.html" class="nav-link">O Nas</a></li>
+                <li><a href="contact.html" class="nav-link">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="theme-switcher">
+            <button id="theme-toggle">🌙</button>
+        </div>
+    </header>
+    <main>
+        <section id="community" class="section active">
+            <h2>Społeczność</h2>
+            <div class="community-widgets">
+                <div class="forum-preview">
+                    <h3>Forum</h3>
+                    <ul>
+                        <li><a href="#">[Porady] Jak zacząć w Baldur's Gate 3?</a> <span class="forum-author">by user123</span></li>
+                        <li><a href="#">[Dyskusja] Ulubione gry 2025</a> <span class="forum-author">by gamer_pl</span></li>
+                        <li><a href="#">[Problem] Nie działa Cyberpunk po aktualizacji</a> <span class="forum-author">by anna99</span></li>
+                    </ul>
+                    <a href="#" class="see-all">Zobacz wszystkie wątki</a>
+                </div>
+                <div class="poll">
+                    <h3>Ankieta tygodnia</h3>
+                    <form id="poll-form">
+                        <p>Na jaką premierę czekasz najbardziej?</p>
+                        <label><input type="radio" name="game" value="Witcher4"> Wiedźmin 4</label><br>
+                        <label><input type="radio" name="game" value="GTA6"> GTA 6</label><br>
+                        <label><input type="radio" name="game" value="TES6"> The Elder Scrolls VI</label><br>
+                        <button type="submit">Zagłosuj</button>
+                    </form>
+                    <div id="poll-results" class="hidden"></div>
+                </div>
+                <div class="discord-widget">
+                    <h3>Dołącz do naszego Discorda!</h3>
+                    <iframe src="https://discord.com/widget?id=613425648685547541&theme=dark" width="100%" height="200" allowtransparency="true" frameborder="0"></iframe>
+                </div>
+                <div class="twitter-widget">
+                    <h3>Twitter GameVerse</h3>
+                    <a class="twitter-timeline" data-height="200" href="https://twitter.com/PlayStationPL?ref_src=twsrc%5Etfw">Tweety PlayStationPL</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>© 2025 GameVerse. Wszelkie prawa zastrzeżone.</div>
+        <div>
+            <a href="privacy.html">Polityka prywatności</a> | 
+            <a href="rules.html">Regulamin</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>
