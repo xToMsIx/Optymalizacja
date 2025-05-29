@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /panel/
+Disallow: /private/
+Allow: /publiczny-folder/
+Sitemap: https://www.gameverse.pl/sitemap.xml
